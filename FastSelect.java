@@ -46,7 +46,7 @@ public class FastSelect {
 		swap( i, s, arr );
 		s++;}
 	}
-	swap(s,b,arr);
+	swap( s, right ,arr );
 
 	return s;
     }//end partition
