@@ -53,28 +53,28 @@ public class FastSelect {
     public static int fastSelect( int arr[], int y ) {
 	int a = 0;
 	int b = arr.length - 1;
-
+	int c = y - 1;
 	System.out.println( "==============================" );
-	System.out.println( "Fast Selection of the " + y + "'th smallest in this array:" );
+	System.out.println( "Fast Selection of the " + y + " smallest in this array:" );
 	printArr( arr );
-	while ( partition( arr, a, b, y ) != y ) {
-	    if ( partition( arr, a, b, y ) > y ) {
+	while ( partition( arr, a, b, c ) != c ) {
+	    if ( partition( arr, a, b, c ) > c ) {
 		int[] arr2 = new int[ arr.length - 1 ];
 		for ( int i = 0; i < arr.length - 1; i++ ) {
 		    arr2[i] = arr[i];
 		}
-		fastSelect( arr2, y - 1 );
+		fastSelect( arr2, c - 1 );
 	    }
-	    else if ( partition( arr, a, b, y ) < y ) {
+	    else if ( partition( arr, a, b, c ) < c ) {
 		int[] arr3 = new int[ arr.length - 1 ];
 		for ( int i = 1; i < arr.length; i++ ) {
 		    arr3[i - 1] = arr[i];
 		}
-		fastSelect( arr3, y + 1 );
+		fastSelect( arr3, c + 1 );
 	    }
 	}
-	System.out.println( "" + arr[y] );
-	return arr[y];
+	System.out.println( "" + arr[c] );
+	return arr[c];
     }
 
     public static void main ( String[] args ) {
