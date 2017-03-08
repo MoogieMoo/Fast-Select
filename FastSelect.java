@@ -37,7 +37,6 @@ public class FastSelect {
 
     public static int partition( int arr[], int left, int right, int pvt ) {
 	int v = arr[pvt];
-
 	swap( pvt, right, arr);
 	int s = left;
 
@@ -54,6 +53,10 @@ public class FastSelect {
     public static int fastSelect( int arr[], int y ) {
 	int a = 0;
 	int b = arr.length - 1;
+
+	System.out.println( "==============================" );
+	System.out.println( "Fast Selection of the " + y + "'th smallest in this array:" );
+	printArr( arr );
 	while ( partition( arr, a, b, y ) != y ) {
 	    if ( partition( arr, a, b, y ) > y ) {
 		int[] arr2 = new int[ arr.length - 1 ];
@@ -70,6 +73,7 @@ public class FastSelect {
 		fastSelect( arr3, y + 1 );
 	    }
 	}
+	System.out.println( "" + arr[y] );
 	return arr[y];
     }
 
