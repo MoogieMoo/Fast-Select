@@ -74,7 +74,7 @@ public class FastSelect {
 	    }
 	}
 	System.out.println( "" + arr[c] );
-	return arr[c];
+	return arr[y];
     }
 
     public static void main ( String[] args ) {
@@ -84,9 +84,17 @@ public class FastSelect {
 	int[] a3 = {5,4,17,9000,6};
 	int[] a4 = {3,0,16,599,1024};
 
+	fastSelect( a1, 1 );
+	fastSelect( a1, 2 );
 	fastSelect( a1, 3 );
+	fastSelect( a2, 1 );
+	fastSelect( a2, 2 );
 	fastSelect( a2, 3 );
+	fastSelect( a3, 1 );
+	fastSelect( a3, 2 );
 	fastSelect( a3, 3 );
+	fastSelect( a4, 1 );
+	fastSelect( a4, 2 );
 	fastSelect( a4, 3 );
 
     }
