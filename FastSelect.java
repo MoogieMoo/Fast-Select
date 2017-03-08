@@ -36,7 +36,7 @@ public class FastSelect {
     //--------------^  HELPER METHODS  ^--------------
 
     public static int partition( int arr[], int left, int right, int pvt ) {
-	int v = arr[c];
+	int v = arr[pvt];
 
 	swap( pvt, right, arr);
 	int s = left;
